@@ -1,14 +1,14 @@
 import { StyleSheet } from "react-native"
 
 export default StyleSheet.create({
+
+
     menu_container: {
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
         position: "relative",
-        left: menuINFO.xPOS,
-        top: menuINFO.yPOS,
     },
 
 
@@ -21,6 +21,8 @@ export default StyleSheet.create({
     wrectangle: {
         width: 20,
         height: 3,
-        backgroundColor: globalBackgroundColor.bacgroundcolor,
+        // backgroundColor: globalBackgroundColor,
     }
 })
+
+//var globalBackgroundColor = "white";

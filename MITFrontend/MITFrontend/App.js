@@ -1,23 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
+import react from 'react';
 import styles from "./Styles"
-import menu from "./Menu.js"
-import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
+import Menu from "./Menu"
+import {View, TouchableHighlight } from 'react-native';
 
-export default function App() {
+const LifeguardApp = () => {
 
     return (
       
     <View style={styles.menu_container}>
-        <TouchableHighlight onPress={menu.menuCLicked()} underlayColor='white'>
-            <Menu></Menu>
+        <TouchableHighlight underlayColor='white'>
+                <Menu></Menu>
         </TouchableHighlight>
     </View>
   );
 }
 
+export default LifeguardApp;
 
 
 
-var globalBackgroundColor = { bacgroundcolor: 'white' }
+
 
 

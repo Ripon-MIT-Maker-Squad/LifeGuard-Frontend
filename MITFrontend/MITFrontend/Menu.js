@@ -1,16 +1,23 @@
+import styles from "./Styles";
+import { View } from "react-native";
+import { Component } from "react";
 
-class Menu {
+class Menu extends Component{
 
     constructor() {
-
-        menuINFO = {
+        super();
+        this.menuINFO = {
             xPOS: -160,
             yPOS: -350,
             deltaX: 100,
             deltaY: 0,
             isOpen: false
         };
+    }
+
+    render() {
         return (
+
             <div>
                 <View style={styles.rectangle}></View>
                 <View style={styles.wrectangle}></View>
@@ -24,25 +31,24 @@ class Menu {
   
 
     expandMenu = () => {
-        menuINFO.isOpen = true;
-        menuINFO.xPOS += menuINFO.deltaX;
-        menuINFO.yPOS += menuINFO.deltaY;
+        this.menuINFO.isOpen = true;
+        this.menuINFO.xPOS += this.menuINFO.deltaX;
+        this.menuINFO.yPOS += this.menuINFO.deltaY;
     };
 
     contractMenu = () => {
-        menuINFO.isOpen = true;
-        menuINFO.xPOS += menuINFO.deltaX;
-        menuINFO.yPOS += menuINFO.deltaY;
+        this.menuINFO.isOpen = true;
+        this.menuINFO.xPOS += this.menuINFO.deltaX;
+        this.menuINFO.yPOS += this.menuINFO.deltaY;
     }
 
     menuClicked = () => {
-        if (menuINFO.isOpen == false)
-            expandMenu();
-        else if (menuINFO.isOpen == true)
-            contractMenu();
+        if (this.menuINFO.isOpen === false)
+            this.expandMenu();
+        else if (this.menuINFO.isOpen === true)
+            this.contractMenu();
     };
 
 }
 
-const menu = new Menu();
-export default menu;
+export default Menu;

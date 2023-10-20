@@ -8,12 +8,14 @@ const LifeguardApp = () => {
     return (
       
     <View style={styles.menu_container}>
-        <TouchableHighlight underlayColor='white'>
+            <TouchableHighlight underlayColor='white' activeOpacity={0.6}
+                underlayColor="#DDDDDD"
+                onPress={() => Menu.menuClicked}>
                 <Menu></Menu>
         </TouchableHighlight>
     </View>
   );
-}
+};
 
 export default LifeguardApp;
 

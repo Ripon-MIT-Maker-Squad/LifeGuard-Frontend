@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "MITFrontend",
-    "slug": "MITFrontend",
+    "slug": "mit-frontend",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,7 +15,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "mitfrontendios"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +26,15 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "74ec7a28-f1c6-45c6-9616-46c716f7af95",
+        "cli": {
+          "requireCommit": true
+        }
+      }
+    },
+    "owner": "deepsingh14"
   }
 }
